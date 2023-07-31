@@ -1,0 +1,9 @@
+services:
+  blog-dev:
+    build: .
+    command: |
+      bundle exec jekyll serve --livereload --drafts
+    port:
+      - 127.0.0.1:4000:4000
+      - 127.0.0.1:4001:4001
+    working_dir: /code
